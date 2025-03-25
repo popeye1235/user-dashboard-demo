@@ -1,0 +1,29 @@
+
+
+  <div class="modal">
+    <div class="modal-content">
+      <button class="close-btn" (click)="closeModal()">×</button>
+  
+      <h2 class="modal-title">Add New User</h2>
+      <form [formGroup]="userForm" (ngSubmit)="submitForm()" class="modal-form">
+        <div class="form-group">
+          <label for="name" class="form-label">Name:</label>
+          <input id="name" type="text" formControlName="name" required class="form-input">
+        </div>
+  
+        <div class="form-group">
+          <label for="email" class="form-label">Email:</label>
+          <input id="email" type="email" formControlName="email" required class="form-input">
+        </div>
+  
+        <div class="form-group">
+          <label for="role" class="form-label">Role:</label>
+          <select id="role" formControlName="role" class="form-input">
+            <option *ngFor="let role of roles" [value]="role">{{ role }}</option>
+          </select>
+        </div>
+  
+        <button type="submit" [disabled]="userForm.invalid" class="submit-btn">Add User</button>
+      </form>
+    </div>
+  </div>
