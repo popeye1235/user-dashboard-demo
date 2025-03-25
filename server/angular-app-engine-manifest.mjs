@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/',
+  basePath: 'https://popeye1235.github.io/user-dashboard-demo',
   supportedLocales: {
   "en-US": ""
 },

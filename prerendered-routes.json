@@ -1,5 +1,5 @@
 {
   "routes": {
-    "/": {}
+    "/user-dashboard-demo": {}
   }
 }
